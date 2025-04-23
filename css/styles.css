@@ -1,0 +1,153 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #2c2c2c;
+}
+
+.container {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: url('../assets/banner.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 5%;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #ff6600;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e65c00;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.art-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.art-item:hover {
+  transform: scale(1.03);
+}
+
+.art-item img {
+  width: 100%;
+  display: block;
+}
+
+.art-item .info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.news-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 5px solid #4caf50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  margin-top: 1rem;
+}
+
+.testimonials-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-outline {
+  border: 2px solid #0066cc;
+  background: none;
+  color: #0066cc;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #0066cc;
+  color: white;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 5%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

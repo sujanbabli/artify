@@ -22,9 +22,9 @@ if (isset($_POST['add_product'])) {
   if ($insert_query) {
     // Move uploaded file to target folder
     move_uploaded_file($product_image_temp_name, $product_image_folder);
-    echo "✅ Product inserted successfully.";
+    $display_message = "✅ Product inserted successfully.";
   } else {
-    echo "❌ Failed to insert product: " . mysqli_error($conn);
+    $display_message = "❌ Failed to insert product: " . mysqli_error($conn);
   }
 }
 ?>
@@ -57,6 +57,15 @@ if (isset($_POST['add_product'])) {
   </section>
  <!-- container -->
 <div class="container">
+
+<?php if (isset($display_message)): ?>
+  <div class="display_message">
+    <span><?= $display_message ?></span>
+    <i class="fas fa-times" onclick="this.parentElement.style.display='none';"></i>
+  </div>
+<?php endif; ?>
+
+
   <section>
     <h3 class="heading">Add Products</h3>
     <form action="" class="add_products" method="post" enctype="multipart/form-data">

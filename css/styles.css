@@ -200,3 +200,33 @@ body {
 .submit_btn:hover {
   background: #e65c00;
 }
+
+.display_message {
+  background-color: #d4edda; /* Light green background for success */
+  color: #155724;            /* Dark green text */
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-left: 5px solid #28a745;
+  border-radius: 6px;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.display_message span {
+  font-size: 1rem;
+  display: inline-block;
+}
+
+.display_message i {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  cursor: pointer;
+  color: #155724;
+  font-size: 1.2rem;
+}
+
+.display_message i:hover {
+  color: #0c3f1b;
+}

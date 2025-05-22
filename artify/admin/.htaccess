@@ -1,0 +1,21 @@
+# Prevent directory listing
+Options -Indexes
+
+# Redirect root to index.php
+DirectoryIndex index.php
+
+# Handle 404 errors
+ErrorDocument 404 /artify/admin/index.php
+
+# Rewrite rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /artify/admin/
+    
+    # If requested resource exists as a file or directory, skip the following rules
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Redirect all requests to index.php
+    RewriteRule ^(.*)$ index.php [L,QSA]
+</IfModule>

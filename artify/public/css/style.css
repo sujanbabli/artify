@@ -1,0 +1,501 @@
+/* 
+   Artify Aboriginal Art E-commerce - Custom CSS
+   Enhanced theme for showcasing Aboriginal art from Darwin, NT
+*/
+
+/* ====== COLORS AND VARIABLES ====== */
+:root {
+    --aboriginal-red: #a52019;
+    --aboriginal-orange: #df7900;
+    --aboriginal-yellow: #efcc00;
+    --aboriginal-black: #121212;
+    --aboriginal-earth: #7b4a12;
+    --aboriginal-ochre: #c17e41;
+    --aboriginal-charcoal: #333333;
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+}
+
+/* ====== GENERAL STYLING ====== */
+body {
+    font-family: var(--body-font);
+    color: #333;
+    background-color: #f9f7f3;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+.text-aboriginal {
+    color: var(--aboriginal-red);
+}
+
+/* Custom button styles */
+.btn-aboriginal {
+    background-color: var(--aboriginal-red);
+    border-color: var(--aboriginal-red);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-aboriginal:hover {
+    background-color: #8c1b15;
+    border-color: #8c1b15;
+    color: white;
+}
+
+.btn-outline-aboriginal {
+    color: var(--aboriginal-red);
+    border-color: var(--aboriginal-red);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-aboriginal:hover {
+    background-color: var(--aboriginal-red);
+    color: white;
+}
+
+/* Aboriginal patterns and backgrounds */
+.bg-aboriginal-pattern {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../images/patterns/aboriginal-pattern.png');
+    background-size: 300px;
+}
+
+.bg-aboriginal-pattern-subtle {
+    background: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)), 
+                url('../images/patterns/aboriginal-pattern.png');
+    background-size: 300px;
+}
+
+.bg-aboriginal-light {
+    background-color: #f8f3e9;
+}
+
+.bg-aboriginal-dark {
+    background-color: var(--aboriginal-black);
+}
+
+.bg-aboriginal {
+    background-color: var(--aboriginal-red);
+}
+
+/* Background pattern variations */
+.bg-aboriginal-pattern-alt {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url('../images/patterns/aboriginal-pattern-2.png');
+    background-size: 200px;
+}
+
+.bg-aboriginal-pattern-tertiary {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+                url('../images/patterns/aboriginal-pattern-3.png');
+    background-size: 200px;
+}
+
+/* Custom rounded corners */
+.rounded-custom {
+    border-radius: 12px;
+}
+
+/* ====== PRODUCT CARDS ====== */
+.product-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--aboriginal-red);
+}
+
+.product-card .card-body {
+    padding: 20px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--aboriginal-red);
+    font-size: 1.2rem;
+}
+
+/* ====== CART ====== */
+.cart-item {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ====== CHECKOUT ====== */
+.checkout-steps {
+    display: flex;
+    align-items: center;
+}
+
+.checkout-form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ====== HEADER AND NAVIGATION ====== */
+.navbar {
+    background: linear-gradient(90deg, var(--aboriginal-black) 0%, var(--aboriginal-red) 100%) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* ====== HERO SECTION ====== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    margin-bottom: 30px;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ====== TESTIMONIALS ====== */
+.testimonial-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 80px;
+    line-height: 1;
+    color: rgba(165, 32, 25, 0.1);
+    font-family: serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid var(--aboriginal-red);
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    color: #ddd;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f8b739;
+}
+
+.star-rating input:checked + label:hover,
+.star-rating input:checked ~ label:hover,
+.star-rating input:checked ~ label:hover ~ label,
+.star-rating label:hover ~ input:checked ~ label {
+    color: #f6ab0c;
+}
+
+/* Testimonials Page */
+.testimonial-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-stars {
+    color: #f8b739;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ====== ABOUT PAGE SPECIFIC ====== */
+.about-overlay-box {
+    position: absolute;
+    bottom: 30px;
+    right: -30px;
+    max-width: 350px;
+}
+
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8f3e9;
+    font-size: 24px;
+    color: var(--aboriginal-red);
+}
+
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.artist-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-7px);
+}
+
+.artist-image {
+    height: 250px;
+    object-fit: cover;
+}
+
+.artist-placeholder {
+    height: 250px;
+}
+
+.ethical-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f8f3e9;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.ethical-badge i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.dot-pattern-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(165, 32, 25, 0.2) 10%, transparent 10%);
+    background-size: 20px 20px;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--aboriginal-yellow);
+}
+
+.map-container {
+    height: 350px;
+}
+
+/* ====== NEWS SECTION ====== */
+.news-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-date {
+    color: var(--aboriginal-red);
+    font-weight: 600;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+    background: linear-gradient(90deg, var(--aboriginal-black) 0%, var(--aboriginal-charcoal) 100%);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 60px 0 30px;
+}
+
+.footer h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--aboriginal-red);
+    display: inline-block;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+    text-decoration: none;
+    transform: translateX(5px);
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: var(--aboriginal-red);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .product-img-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .product-img-container {
+        height: 180px;
+    }
+}

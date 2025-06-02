@@ -1,7 +1,0 @@
-# Disable directory listing
-Options -Indexes
-
-# Redirect root to public directory
-RewriteEngine On
-RewriteRule ^$ public/ [L]
-RewriteRule ^(.*)$ public/$1 [L]

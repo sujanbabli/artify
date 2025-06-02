@@ -1,0 +1,230 @@
+/* Admin Dashboard Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #343a40;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 0 20px 20px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.sidebar-nav {
+    padding: 0;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 5px;
+}
+
+.sidebar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    border-left: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.sidebar-nav .nav-link:hover,
+.sidebar-nav .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #007bff;
+}
+
+.sidebar-nav .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+/* Navbar */
+.admin-navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.admin-navbar .navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Cards */
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .card-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.dashboard-card .card-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dashboard-card .card-label {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Card link styles */
+a.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+a.card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Quick Access Cards */
+.quick-action-card {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    background: #fff;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #495057;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #495057;
+}
+
+.quick-action-card .icon-container {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.quick-action-card .action-text {
+    font-weight: 500;
+}
+
+/* Tables */
+.admin-table {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.admin-table .table {
+    margin-bottom: 0;
+}
+
+.admin-table th {
+    background-color: #f8f9fa;
+    border-top: none;
+    font-weight: 600;
+}
+
+.admin-table .actions {
+    white-space: nowrap;
+}
+
+/* Forms */
+.admin-form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-form .form-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .sidebar.active {
+        width: 250px;
+        padding-top: 20px;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .main-content.shrink {
+        margin-left: 250px;
+    }
+}

@@ -1,0 +1,12 @@
+# Disable directory listing
+Options -Indexes
+
+# Redirect root to public directory
+RewriteEngine On
+RewriteRule ^$ public/ [L]
+
+# Special rule for test paths
+RewriteRule ^tests/(.*)$ tests/$1 [L]
+
+# All other requests go to public
+RewriteRule ^(.*)$ public/$1 [L]
